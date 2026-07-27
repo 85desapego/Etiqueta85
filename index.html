@@ -1,17 +1,28 @@
-<!DOCTYPE html><html lang="pt-BR"><head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#6E2F46">
 <link rel="manifest" href="manifest.json">
-<title>Etiqueta85</title>
 <link rel="stylesheet" href="style.css">
+<title>Etiqueta85 v1.1</title>
 <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
-</head><body>
+</head>
+<body>
 <div class="app">
-<h1>Etiqueta85</h1>
-<p class="sub">85 DESAPEGO</p>
+<h1>Etiqueta85 <span>v1.1</span></h1>
 
+<div class="row">
+<div>
 <label>Último código</label>
 <input id="ultimo" type="number">
+</div>
+<div>
+<label>Qtd.</label>
+<input id="quantidade" type="number" value="1" min="1" max="100">
+</div>
+</div>
 
 <label>Categoria</label>
 <select id="categoria">
@@ -19,24 +30,22 @@
 <option>Saia</option><option>Short</option><option>Blazer</option>
 </select>
 
+<div class="row">
+<div>
 <label>Tamanho</label>
 <select id="tam"><option>PP</option><option>P</option><option selected>M</option><option>G</option><option>GG</option></select>
-
+</div>
+<div>
 <label>Preço</label>
 <input id="preco" placeholder="89,90">
+</div>
+</div>
 
-<button onclick="gerar()">Gerar etiqueta</button>
+<button onclick="gerar()">Gerar etiquetas</button>
 
-<div id="preview" class="hide">
-<div class="etiqueta">
-<div class="logo">85 DESAPEGO</div>
-<div class="linha"><span id="cat"></span><span>Tam <span id="tamanho"></span></span></div>
-<div class="preco">R$ <span id="valor"></span></div>
-<svg id="barcode"></svg>
-<div id="sku" class="sku"></div>
+<div id="etiquetas"></div>
 </div>
-<button onclick="window.print()">🖨️ Imprimir</button>
-</div>
-</div>
+
 <script src="app.js"></script>
-</body></html>
+</body>
+</html>

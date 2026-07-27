@@ -1,9 +1,15 @@
-body{margin:0;background:#f8f6f2;font-family:Arial,sans-serif}
-.app{max-width:500px;margin:20px auto;background:#fff;padding:20px;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,.1)}
-h1{margin:0;color:#6E2F46}.sub{margin:4px 0 16px;color:#666}
-label{display:block;margin-top:12px;font-weight:bold}
+
+body{margin:0;background:#f8f6f2;font-family:Arial}
+.app{max-width:720px;margin:20px auto;background:#fff;padding:20px;border-radius:14px}
+.row{display:flex;gap:12px}.row>div{flex:1}
 input,select,button{width:100%;padding:12px;box-sizing:border-box;border-radius:8px}
-button{margin-top:16px;border:none;background:#6E2F46;color:#fff;font-weight:bold}
-.hide{display:none;margin-top:20px}.etiqueta{width:58mm;border:1px solid #000;padding:8px;background:#fff;text-align:center}
-.logo{font-weight:bold}.linha{display:flex;justify-content:space-between;font-size:12px;margin:6px 0}.preco{font-size:28px;font-weight:bold}.sku{font-size:12px;font-weight:bold}
-@media print{.app>*:not(#preview){display:none}.etiqueta{border:none}}
+button{margin-top:16px;background:#6E2F46;color:#fff;border:none;font-weight:bold}
+#etiquetas{display:flex;flex-wrap:wrap;gap:16px;margin-top:20px}
+.et{width:58mm;border:1px solid #000;padding:8px;text-align:center;background:#fff}
+.logo{font-weight:bold}.info{display:flex;justify-content:space-between;font-size:12px}.preco{font-size:28px;font-weight:bold}.sku{font-size:12px;font-weight:bold}
+@media print{
+button,.row,label,input,select,h1{display:none!important}
+body{background:#fff}
+.app{box-shadow:none}
+.et{border:none;page-break-after:always}
+}
