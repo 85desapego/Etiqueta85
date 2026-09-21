@@ -8,7 +8,7 @@ function gerar(){
    ult++;
    const sku='85-'+String(ult).padStart(6,'0');
    html+=`<div class="et">
-   <div class="logo">85 DESAPEGO</div>
+   <div class="logo">85 Rêapego</div>
    <div class="info"><span>${categoria.value}</span><span>Tam ${tam.value}</span></div>
    <div class="preco">R$ ${preco.value}</div>
    <svg id="bc${i}"></svg>
